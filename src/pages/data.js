@@ -2,18 +2,12 @@ import { useContext, useEffect, useState } from "react"
 import Axios from "axios"
 import NoteContext from "../context/noteContext";
 import theme from "../theme";
-import { AppBar, makeStyles, useTheme } from '@mui/styles';
+
 import MultiCard from '../components/Card2';
-import { Card, keyframes } from "@mui/material";
-import {styled }from "@mui/styles";
-import { Box } from "@mui/system";
 
 
-const useStyles = makeStyles({
-  btn:{
-    color: theme.status.color
-  }
-})
+
+
 
  function  getToken() {
     const tokenString = sessionStorage.getItem('token');
@@ -27,7 +21,7 @@ const useStyles = makeStyles({
 
 const Data=({route})=>{
   const a=useContext(NoteContext);
-  const classes=useStyles()
+ 
   const tekken=getToken();
   if(tekken){
     a.setToken(tekken)
@@ -87,7 +81,7 @@ const Data=({route})=>{
           }
           else{
             return(<>
-            <h1 className={classes.btn} >Login First</h1>
+            <h1 >Login First</h1>
             
             </>)
           }
