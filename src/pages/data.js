@@ -44,7 +44,7 @@ const Data=({route})=>{
    
     console.log(tekken)
    
-   Axios.get("http://localhost:5000/data",{headers:{
+   Axios.get("https://hulkmerndb.herokuapp.com/data",{headers:{
     'Authorization':tekken
    }})
    .then((response) => {

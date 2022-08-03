@@ -26,7 +26,7 @@ export default function SignUp() {
       password: data.get('password'),
     });
   
-     await Axios.post("http://localhost:5000/signup", {
+     await Axios.post("https://hulkmerndb.herokuapp.com/signup", {
         name:data.get('name'),
         email:data.get('email'),
         password:data.get('password'),
